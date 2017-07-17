@@ -3,9 +3,12 @@ using ScrapySharp.Extensions;
 using ScrapySharp.Html;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,6 +19,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.model;
 
 namespace WpfApp1
 {
@@ -24,24 +28,54 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+        
+
         public MainWindow()
         {
             InitializeComponent();
-            
+  
 
         }
 
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private async  void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            ScrapySharp.Network.ScrapingBrowser browser = new ScrapySharp.Network.ScrapingBrowser();
-            var res = await browser.NavigateToPageAsync(new Uri("http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/"));
-           
 
-           foreach (HtmlAgilityPack.HtmlNode elem in res.Html.CssSelect(".cmp"))
-            {
-
-                Debug.WriteLine(  "nom : " + elem.CssSelect(".nom").FirstOrDefault()?.InnerText+ " prix  : " + elem.CssSelect(".price").FirstOrDefault()?.InnerText);
-            }
+            //HDD
+            dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/")).OrderBy(p=>p.Prix);
+            
+            //CG
+            //dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/")).OrderBy(p => p.Prix);
         }
+
+        public async Task<List<HDD>> LDLCExtractor(string baseUrl) 
+        {
+            List<HDD> LstProd = new List<HDD>(); 
+            ScrapySharp.Network.ScrapingBrowser browser = new ScrapySharp.Network.ScrapingBrowser();
+            var res = await browser.NavigateToPageAsync(new Uri(baseUrl));
+            foreach (HtmlNode elem in res.Html.CssSelect(".pagerItem"))
+            {
+                var url = elem.Attributes.Where(a => a.Name == "href").First().Value;
+                var rslt = await browser.NavigateToPageAsync(new Uri(url));
+                foreach (HtmlAgilityPack.HtmlNode prod in rslt.Html.CssSelect(".cmp"))
+                {
+                    var price = prod.CssSelect(".price").FirstOrDefault()?.InnerText;
+                    float finalprice = 0.0f;
+                    Regex regex = new Regex(@"(\d+)&euro;(\d\d)");
+                    if (price != null)
+                    {
+                        Match match = regex.Match(price);
+                        if (match.Success)
+                        {
+                            finalprice = float.Parse(match.Groups[1].ToString() + "." + match.Groups[2].ToString(), CultureInfo.InvariantCulture);
+                            LstProd.Add(new HDD() { Nom = prod.CssSelect(".nom").FirstOrDefault()?.InnerText, Prix = finalprice });
+                        }
+                    }
+
+                }
+            }
+            return LstProd;
+        }
+        
     }
 }

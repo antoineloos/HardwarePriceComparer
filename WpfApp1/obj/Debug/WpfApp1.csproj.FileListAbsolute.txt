@@ -19,3 +19,29 @@ c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug
 c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
 c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
 C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\FSharp.Core.dll
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\HtmlAgilityPack.dll
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\ScrapySharp.Core.dll
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\ScrapySharpAsync.dll
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\FSharp.Core.xml
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\HtmlAgilityPack.xml
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\App.g.cs
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignColors.dll
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\App.baml
