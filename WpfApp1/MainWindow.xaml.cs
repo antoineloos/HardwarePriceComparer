@@ -47,6 +47,10 @@ namespace WpfApp1
 
             dataGrdtopachat.ItemsSource = (await TopAchatExtractor(@"https://www.topachat.com/pages/produits_cat_est_micro_puis_rubrique_est_wdi_sata.html")).OrderBy(p=>p.PrixAuGO);
 
+            //https://www.grosbill.com/3-disque_dur-3.5-type-informatique
+            //http://www.materiel.net/disque-dur/
+
+
             //CG
             //dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/")).OrderBy(p => p.Prix);
         }
@@ -98,6 +102,8 @@ namespace WpfApp1
             }
             return LstProd;
         }
+
+        
 
         public async Task<List<HDD>> TopAchatExtractor(string rootUrl)
         {
