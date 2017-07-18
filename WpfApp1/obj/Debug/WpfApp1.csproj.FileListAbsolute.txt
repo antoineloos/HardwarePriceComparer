@@ -50,3 +50,5 @@ C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug
 C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\App.baml
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\Nager.AmazonProductAdvertising.dll
+C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\Nager.ArticleNumber.dll

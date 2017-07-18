@@ -46,6 +46,12 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.0.823, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.2.3.0.823\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Nager.AmazonProductAdvertising, Version=1.0.24.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nager.AmazonProductAdvertising.1.0.25\lib\net45\Nager.AmazonProductAdvertising.dll</HintPath>
+    </Reference>
+    <Reference Include="Nager.ArticleNumber, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nager.ArticleNumber.1.0.1\lib\net45\Nager.ArticleNumber.dll</HintPath>
+    </Reference>
     <Reference Include="ScrapySharp.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ScrapySharp.2.6.2\lib\net45\ScrapySharp.Core.dll</HintPath>
     </Reference>

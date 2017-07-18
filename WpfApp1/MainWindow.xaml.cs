@@ -1,4 +1,6 @@
 ﻿using HtmlAgilityPack;
+using Nager.AmazonProductAdvertising;
+using Nager.AmazonProductAdvertising.Model;
 using ScrapySharp.Extensions;
 using ScrapySharp.Html;
 using ScrapySharp.Network;
@@ -39,18 +41,36 @@ namespace WpfApp1
 
         }
 
-        private async  void Window_Loaded(object sender, RoutedEventArgs e)
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
             //HDD
-            dataGrdldlc.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/")).OrderBy(p=>p.PrixAuGO);
-
-            dataGrdtopachat.ItemsSource = (await TopAchatExtractor(@"https://www.topachat.com/pages/produits_cat_est_micro_puis_rubrique_est_wdi_sata.html")).OrderBy(p=>p.PrixAuGO);
-
+            var lstProd =  (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/")).OrderBy(p=>p.PrixAuGO);
+            dataGrdldlc.ItemsSource = lstProd;
+            var lstProd2 = (await TopAchatExtractor(@"https://www.topachat.com/pages/produits_cat_est_micro_puis_rubrique_est_wdi_sata.html")).OrderBy(p=>p.PrixAuGO);
+            dataGrdtopachat.ItemsSource = lstProd2;
             //https://www.grosbill.com/3-disque_dur-3.5-type-informatique
             //http://www.materiel.net/disque-dur/
 
-
+            var auth = new AmazonAuthentication();
+            auth.AccessKey = "";
+            auth.SecretKey = "";
+            var wrapper = new AmazonWrapper(auth, AmazonEndpoint.FR);
+            foreach(HDD di in lstProd2)
+            {
+                var lstReslt = wrapper.Search(di.Nom, AmazonSearchIndex.Electronics);
+                if (lstReslt != null && lstReslt.Items!=null && lstReslt.Items.Item!=null)
+                {
+                    foreach (Item item in lstReslt.Items.Item)
+                    {
+                       
+                            Debug.WriteLine("modèle : " + item.ItemAttributes?.Model + " marque : " + item.ItemAttributes?.Brand + " price : " + item.ItemAttributes?.ListPrice?.FormattedPrice);
+                            
+                    }
+                }
+            }
+           
+            
             //CG
             //dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/")).OrderBy(p => p.Prix);
         }

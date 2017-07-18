@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WpfApp1"
         Loaded="Window_Loaded"
         mc:Ignorable="d"
-        WindowState="Maximized"
-        Title="MainWindow" Height="1080" Width="1920">
+        
+        Title="MainWindow" Height="300" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
