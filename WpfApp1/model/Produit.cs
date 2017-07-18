@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace WpfApp1.model
 {
-    public class HDD : Produit
+    public class Produit
     {
-        
-        public float PrixAuGO { get; set; }
-        public int Capacite { get; set; }
-        
+        public string Reference { get; set; }
+        public float Prix { get; set; }
+        public string Nom { get; set; }
     }
 }

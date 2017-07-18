@@ -1,6 +1,7 @@
 ﻿using HtmlAgilityPack;
 using ScrapySharp.Extensions;
 using ScrapySharp.Html;
+using ScrapySharp.Network;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -59,6 +60,7 @@ namespace WpfApp1
                 var rslt = await browser.NavigateToPageAsync(new Uri(url));
                 foreach (HtmlAgilityPack.HtmlNode prod in rslt.Html.CssSelect(".cmp"))
                 {
+                    HDD tmp = new HDD();
                     var price = prod.CssSelect(".price").FirstOrDefault()?.InnerText;
                     float finalprice = 0.0f;
                     Regex regex = new Regex(@"(\d+)&euro;(\d\d)");
@@ -68,7 +70,13 @@ namespace WpfApp1
                         if (match.Success)
                         {
                             finalprice = float.Parse(match.Groups[1].ToString() + "." + match.Groups[2].ToString(), CultureInfo.InvariantCulture);
-                            LstProd.Add(new HDD() { Nom = prod.CssSelect(".nom").FirstOrDefault()?.InnerText, Prix = finalprice });
+                            var resNom = prod.CssSelect(".nom").FirstOrDefault();
+                            tmp.Nom = resNom?.InnerText;
+                            tmp.Prix = finalprice;
+                            var prodRes = await browser.NavigateToPageAsync(new Uri(resNom.Attributes.Where(a => a.Name == "href").First().Value));
+                            // Debug.WriteLine(prodRes.Html.ChildNodes.Where());
+                           
+                            LstProd.Add(tmp);
                         }
                     }
 
@@ -76,6 +84,8 @@ namespace WpfApp1
             }
             return LstProd;
         }
+
+        
         
     }
 }
