@@ -45,3 +45,8 @@ C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThe
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\App.baml
+C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\App.baml

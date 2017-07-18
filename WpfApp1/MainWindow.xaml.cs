@@ -43,7 +43,7 @@ namespace WpfApp1
         {
 
             //HDD
-            dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/")).OrderBy(p=>p.Prix);
+            dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/")).OrderBy(p=>p.PrixAuGO);
             
             //CG
             //dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/")).OrderBy(p => p.Prix);
@@ -74,8 +74,20 @@ namespace WpfApp1
                             tmp.Nom = resNom?.InnerText;
                             tmp.Prix = finalprice;
                             var prodRes = await browser.NavigateToPageAsync(new Uri(resNom.Attributes.Where(a => a.Name == "href").First().Value));
-                            // Debug.WriteLine(prodRes.Html.ChildNodes.Where());
-                           
+                            
+                            var tech = prodRes.Html.CssSelect(".param1192");
+                            Regex reg2 = new Regex(@"(\d+)\s(To|Go)");
+                            string spec = tech.First().InnerText;
+
+                            Match match2 = reg2.Match(spec);
+                            if (match2.Success)
+                            {
+
+                                if (match2.Groups[2].Value == "To") tmp.Capacite = int.Parse(match2.Groups[1].Value) * 1000;
+                                else if (match2.Groups[2].Value == "Go") tmp.Capacite = int.Parse(match2.Groups[1].Value);
+
+                                tmp.PrixAuGO = (float)tmp.Prix / (float)tmp.Capacite;
+                            }
                             LstProd.Add(tmp);
                         }
                     }
