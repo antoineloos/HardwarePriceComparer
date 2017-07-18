@@ -8,7 +8,7 @@ namespace WpfApp1.model
 {
     public class Produit
     {
-        public string Reference { get; set; }
+        //public string Reference { get; set; }
         public float Prix { get; set; }
         public string Nom { get; set; }
     }

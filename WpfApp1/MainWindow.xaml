@@ -6,10 +6,29 @@
         xmlns:local="clr-namespace:WpfApp1"
         Loaded="Window_Loaded"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        WindowState="Maximized"
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid>
-        <DataGrid x:Name="dataGrd">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="./Assets/amazon.png" Grid.Column="2" Margin="100,10"/>
+        <Image Source="./Assets/ldlc.png" Grid.Column="0" Margin="100,10"/>
+        <Image Source="./Assets/topachat.png" Grid.Column="1" Margin="100,20"/>
+        <DataGrid Grid.Row="1" Grid.Column="0" x:Name="dataGrdldlc">
             
+        </DataGrid>
+        <DataGrid Grid.Row="1" Grid.Column="1" x:Name="dataGrdtopachat">
+
+        </DataGrid>
+        <DataGrid Grid.Row="1" Grid.Column="2" x:Name="dataGrdamazon">
+
         </DataGrid>
     </Grid>
 </Window>

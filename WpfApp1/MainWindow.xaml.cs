@@ -43,8 +43,10 @@ namespace WpfApp1
         {
 
             //HDD
-            dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/")).OrderBy(p=>p.PrixAuGO);
-            
+            dataGrdldlc.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/")).OrderBy(p=>p.PrixAuGO);
+
+            dataGrdtopachat.ItemsSource = (await TopAchatExtractor(@"https://www.topachat.com/pages/produits_cat_est_micro_puis_rubrique_est_wdi_sata.html")).OrderBy(p=>p.PrixAuGO);
+
             //CG
             //dataGrd.ItemsSource = (await LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/")).OrderBy(p => p.Prix);
         }
@@ -97,7 +99,66 @@ namespace WpfApp1
             return LstProd;
         }
 
-        
-        
+        public async Task<List<HDD>> TopAchatExtractor(string rootUrl)
+        {
+            string UrlBase = "https://www.topachat.com";
+            List<HDD> LstProd = new List<HDD>();
+            List<string> LstPage = new List<string>();
+            ScrapySharp.Network.ScrapingBrowser browser = new ScrapySharp.Network.ScrapingBrowser();
+            var res = await browser.NavigateToPageAsync(new Uri(rootUrl));
+            LstPage.Add(rootUrl);
+            var pagin = res.Html.CssSelect(".pagination");
+            foreach (HtmlNode elem in pagin.Last().ChildNodes.Where(n => n.Attributes.Any(a => a.Name == "href")))
+            {
+
+                LstPage.Add(elem.Attributes.Where(at => at.Name == "href").First().Value);
+
+            }
+
+            LstPage.Remove(LstPage.Last());
+            LstPage[0] = LstPage.First().Replace(UrlBase, "");
+
+            foreach (string elem in LstPage)
+            {
+                
+                var rslt = await browser.NavigateToPageAsync(new Uri(UrlBase+elem));
+                foreach (HtmlAgilityPack.HtmlNode prod in rslt.Html.CssSelect(".grille-produit"))
+                {
+                    HDD tmp = new HDD();
+                    var price = prod.CssSelect(".price").FirstOrDefault()?.InnerText;
+                    float finalprice = 0.0f;
+                    Regex regex = new Regex(@"(\d+.\d\d)&nbsp;&euro;");
+                    if (price != null)
+                    {
+                        Match match = regex.Match(price);
+                        if (match.Success)
+                        {
+                            finalprice = float.Parse(match.Groups[1].Value, CultureInfo.InvariantCulture);
+                         
+                            tmp.Prix = finalprice;
+                           
+                            
+                            Regex reg2 = new Regex(@"(.+),\s(\d+)\s(To|Go)");
+                            string spec = prod.CssSelect(".libelle").First().InnerText;
+
+                            Match match2 = reg2.Match(spec);
+                            if (match2.Success)
+                            {
+                                tmp.Nom = match2.Groups[1].Value.Replace("\t","");
+                                
+                                if (match2.Groups[3].Value == "To") tmp.Capacite = int.Parse(match2.Groups[2].Value) * 1000;
+                                else if (match2.Groups[3].Value == "Go") tmp.Capacite = int.Parse(match2.Groups[2].Value);
+
+                                tmp.PrixAuGO = (float)tmp.Prix / (float)tmp.Capacite;
+                            }
+                            LstProd.Add(tmp);
+                        }
+                    }
+
+                }
+            }
+            return LstProd;
+        }
+
     }
 }
