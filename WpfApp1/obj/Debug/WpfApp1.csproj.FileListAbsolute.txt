@@ -1,24 +1,3 @@
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\FSharp.Core.dll
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\HtmlAgilityPack.dll
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\ScrapySharp.Core.dll
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\ScrapySharpAsync.dll
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\FSharp.Core.xml
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\HtmlAgilityPack.pdb
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\HtmlAgilityPack.xml
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\App.g.cs
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
-c:\users\antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
-C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\WpfApp1.exe.config
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\WpfApp1.exe
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\WpfApp1.pdb
@@ -45,10 +24,41 @@ C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThe
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\obj\Debug\App.baml
-C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
-C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
-C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
-C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Antoine\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\App.baml
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\Nager.AmazonProductAdvertising.dll
 C:\Users\antoi\Desktop\HardwarePriceComparer\WpfApp1\bin\Debug\Nager.ArticleNumber.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\FSharp.Core.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Nager.AmazonProductAdvertising.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Nager.ArticleNumber.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Prism.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Prism.Wpf.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\ScrapySharp.Core.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\ScrapySharpAsync.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\FSharp.Core.xml
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Prism.xml
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\Prism.Wpf.xml
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\App.baml
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Antoine\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb

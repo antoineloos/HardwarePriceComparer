@@ -4,10 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
-        Loaded="Window_Loaded"
+
         mc:Ignorable="d"
         
         Title="MainWindow" Height="300" Width="300">
+    <Window.DataContext>
+        <local:MainWindowViewModel x:Name="datacontext"/>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -25,20 +28,12 @@
         <Image Source="./Assets/topachat.png" Grid.Column="1" Margin="10"/>
         <Image Source="./Assets/grosbill.png" Grid.Column="3" Margin="10"/>
         <Image Source="./Assets/materielnet.png" Grid.Column="4" Margin="10"/>
-        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="0" x:Name="dataGrdldlc">
-            
-        </DataGrid>
-        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="1" x:Name="dataGrdtopachat">
 
-        </DataGrid>
-        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="2" x:Name="dataGrdamazon">
+        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding LstLDLC}" x:Name="dataGrdldlc"/>
+        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding LstTopAchat}" x:Name="dataGrdtopachat"/>
+        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="2" ItemsSource="{Binding LstAmazon}" x:Name="dataGrdamazon"/>
+        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="3" ItemsSource="{Binding LstGrosbill}" x:Name="dataGrdgrosbill"/>
+        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="4" ItemsSource="{Binding LstMaterielNet}" x:Name="dataGrdMaterielNet"/>
 
-        </DataGrid>
-        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="3" x:Name="dataGrdgrosbill">
-
-        </DataGrid>
-        <DataGrid BorderThickness="2" BorderBrush="Gray" Grid.Row="1" Grid.Column="4" x:Name="dataGrdMaterielNet">
-
-        </DataGrid>
     </Grid>
 </Window>
