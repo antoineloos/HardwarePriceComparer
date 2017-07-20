@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
 
         mc:Ignorable="d"
-        
+        WindowState="Maximized"
         Title="MainWindow" Height="300" Width="300">
     <Window.DataContext>
         <local:MainWindowViewModel x:Name="datacontext"/>
