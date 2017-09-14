@@ -61,20 +61,32 @@ namespace WpfApp1
             LstTopAchat = new ObservableCollection<HDD>();
             LstMaterielNet = new ObservableCollection<HDD>();
 
-            Task.Factory.StartNew(() =>
-            {
-                ExtractorHelper.LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/", LstLDLC);
-            });
+            //Task.Factory.StartNew(() =>
+            //{
+            //    ExtractorHelper.LDLCExtractor(@"http://www.ldlc.com/informatique/pieces-informatique/disque-dur-interne/c4697/", LstLDLC);
+
+            //});
 
             Task.Factory.StartNew(() =>
             {
                 ExtractorHelper.TopAchatExtractor(@"https://www.topachat.com/pages/produits_cat_est_micro_puis_rubrique_est_wdi_sata.html", LstTopAchat);
+                while (LstTopAchat.Count==0)
+                {
+                    Task.Delay(10000);
+                }
+                ExtractorHelper.AmazonExtractor(LstTopAchat, LstAmazon);
             });
+
+            
+            
 
             Task.Factory.StartNew(() =>
             {
                 ExtractorHelper.GrosbillExtractor(@"https://www.grosbill.com/3-disque_dur-3.5-type-informatique", LstGrosbill);
             });
+
+
+
         }
        
     }

@@ -1,4 +1,6 @@
 ﻿using HtmlAgilityPack;
+using Nager.AmazonProductAdvertising;
+using Nager.AmazonProductAdvertising.Model;
 using ScrapySharp.Extensions;
 using System;
 using System.Collections.Generic;
@@ -38,6 +40,32 @@ namespace WpfApp1
         //        }
         //    }
         //}
+
+
+        public static async void AmazonExtractor(ObservableCollection<HDD> lstProdIn, ObservableCollection<HDD> LstProdOut)
+        {
+            var auth = new AmazonAuthentication();
+            auth.AccessKey = "";
+            auth.SecretKey = "";
+            var wrapper = new AmazonWrapper(auth, AmazonEndpoint.FR, "");
+            ObservableCollection<HDD> lstTmp = new ObservableCollection<HDD>(lstProdIn.ToList());
+            foreach (HDD di in lstTmp)
+            {
+                var lstReslt = wrapper.Search(di.Nom, AmazonSearchIndex.Electronics);
+                if (lstReslt != null && lstReslt.Items != null && lstReslt.Items.Item != null)
+                {
+                    foreach (Item item in lstReslt.Items.Item)
+                    {
+
+                        // Debug.WriteLine("modèle : " + item.ItemAttributes?.Model + " marque : " + item.ItemAttributes?.Brand + " price : " + item.ItemAttributes?.ListPrice?.FormattedPrice);
+                        await Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
+                        {
+                            LstProdOut.Add(new HDD() { Nom = item.ItemAttributes?.Brand + " " + item.ItemAttributes?.Model, Prix = float.Parse(item.ItemAttributes?.ListPrice?.FormattedPrice.Replace("EUR ", "")) });
+                        }));
+                    }
+                }
+            }
+        }
 
         public static async void LDLCExtractor(string baseUrl, ObservableCollection<HDD> LstProd)
         {
